@@ -28,7 +28,7 @@ In this revised framing, **author's attention quantity** is retained as a second
 
 ## 3. Data
 
-The analysis uses one local dataset, `B50_X_COMMENT.xlsx`, which is kept outside the public repository in accordance with course policy.
+The analysis uses a local copy of the Break 50 X/Twitter comment dataset, which is kept outside the public repository in accordance with course policy and loaded at runtime via the `BREAK50_DATA_PATH` environment variable.
 
 ### Sample Characteristics
 
@@ -48,11 +48,11 @@ These basic counts already suggest a strongly politicized discussion. Trump-rela
 
 ## 4. Method
 
-## 4.1 Coding Strategy
+### 4.1 Coding Strategy
 
 Because the dataset does not include pre-coded discourse variables, the analysis uses a transparent lexical coding scheme documented in [codebook.md](./codebook.md).
 
-### Stance categories
+#### Stance categories
 
 - `pro-Trump/supportive`
 - `anti-Trump/oppositional`
@@ -61,7 +61,7 @@ Because the dataset does not include pre-coded discourse variables, the analysis
 - `sport-centered`
 - `other/unclear`
 
-### Frame categories
+#### Frame categories
 
 - `political`
 - `blended sport-politics`
@@ -76,7 +76,7 @@ Two additional indicators were also coded:
 
 The purpose of this coding is to create a first-pass map of conflict, ambiguity, and bridge language in the Break 50 comments. It is exploratory and should not be treated as a substitute for full manual coding.
 
-## 4.2 Reaction Measures
+### 4.2 Reaction Measures
 
 To examine which discourse positions receive more visible reinforcement, the report uses:
 
@@ -86,13 +86,13 @@ To examine which discourse positions receive more visible reinforcement, the rep
 
 Unlike the earlier version of the project, these are not treated as interchangeable outcomes. Instead, they are used selectively to ask whether certain stance positions are more visible or more endorsed.
 
-## 4.3 Controlled Checks
+### 4.3 Controlled Checks
 
 The analysis also preserves a limited version of the earlier author-side modeling by using `author's attention quantity` as a control variable in exploratory models predicting log-likes and log-views. This allows the report to distinguish discourse-position patterns from simple account-level attention advantages.
 
 ## 5. Results
 
-## 5.1 Frame Distribution
+### 5.1 Frame Distribution
 
 The frame results show that the comment field is not primarily organized as neutral sport talk.
 
@@ -108,7 +108,7 @@ These counts show that fully half of the comments frame the event politically, w
 
 ![Frame distribution](../outputs/figures/frame_distribution.png)
 
-## 5.2 Stance Distribution
+### 5.2 Stance Distribution
 
 The stance distribution adds more nuance. The largest category is not explicit support or opposition, but a broad middle zone of politically charged reference without a sharply coded resolution.
 
@@ -129,7 +129,7 @@ Three points stand out.
 
 ![Stance distribution](../outputs/figures/stance_distribution.png)
 
-## 5.3 Visible Reaction By Stance
+### 5.3 Visible Reaction By Stance
 
 The engagement comparison shows that reaction patterns differ across discourse positions.
 
@@ -146,7 +146,7 @@ The clearest pattern is that `sport-centered` comments receive the highest media
 
 ![Engagement by stance](../outputs/figures/engagement_by_stance.png)
 
-## 5.4 High-Engagement Comment Composition
+### 5.4 High-Engagement Comment Composition
 
 To see whether highly visible comments differ from the overall discussion, the analysis compares overall stance shares with the top decile of likes and the top decile of comment views.
 
@@ -163,7 +163,7 @@ This comparison suggests that the most visible comments are still dominated by t
 
 ![Top-decile stance shares](../outputs/figures/top_decile_stance_shares.png)
 
-## 5.5 Controlled Checks
+### 5.5 Controlled Checks
 
 The controlled models are not the centerpiece of the revised report, but they provide an important check. After controlling for verification status, language, number of media outlets, number of author posts, and `author's attention quantity`, the attention variable remains strongly associated with visible reaction:
 
