@@ -1,0 +1,125 @@
+{
+  "data_path": "C:\\Users\\Larry.Nie\\Downloads\\B50_X_COMMENT.xlsx",
+  "n_comments": 1008,
+  "stance_distribution": [
+    {
+      "stance": "Trump-referential/unclear",
+      "comments": 623,
+      "share": 0.6180555555555556
+    },
+    {
+      "stance": "pro-Trump/supportive",
+      "comments": 108,
+      "share": 0.10714285714285714
+    },
+    {
+      "stance": "anti-Trump/oppositional",
+      "comments": 30,
+      "share": 0.02976190476190476
+    },
+    {
+      "stance": "depoliticizing/bridge",
+      "comments": 9,
+      "share": 0.008928571428571428
+    },
+    {
+      "stance": "sport-centered",
+      "comments": 41,
+      "share": 0.040674603174603176
+    },
+    {
+      "stance": "other/unclear",
+      "comments": 197,
+      "share": 0.19543650793650794
+    }
+  ],
+  "frame_distribution": [
+    {
+      "frame": "political",
+      "comments": 504,
+      "share": 0.5
+    },
+    {
+      "frame": "blended sport-politics",
+      "comments": 258,
+      "share": 0.25595238095238093
+    },
+    {
+      "frame": "sport",
+      "comments": 41,
+      "share": 0.040674603174603176
+    },
+    {
+      "frame": "depoliticizing bridge",
+      "comments": 9,
+      "share": 0.008928571428571428
+    },
+    {
+      "frame": "other",
+      "comments": 196,
+      "share": 0.19444444444444445
+    }
+  ],
+  "engagement_by_stance": [
+    {
+      "stance": "Trump-referential/unclear",
+      "comments": 623,
+      "likes_mean": 37.881219903691814,
+      "likes_median": 1.0,
+      "views_mean": 7809.786516853933,
+      "views_median": 210.0,
+      "retweet_rate": 0.09791332263242375,
+      "attention_median": 606.0
+    },
+    {
+      "stance": "pro-Trump/supportive",
+      "comments": 108,
+      "likes_mean": 36.601851851851855,
+      "likes_median": 2.0,
+      "views_mean": 7684.0462962962965,
+      "views_median": 234.0,
+      "retweet_rate": 0.1111111111111111,
+      "attention_median": 565.0
+    },
+    {
+      "stance": "anti-Trump/oppositional",
+      "comments": 30,
+      "likes_mean": 10.4,
+      "likes_median": 1.0,
+      "views_mean": 4659.666666666667,
+      "views_median": 82.0,
+      "retweet_rate": 0.2,
+      "attention_median": 346.0
+    },
+    {
+      "stance": "depoliticizing/bridge",
+      "comments": 9,
+      "likes_mean": 17.555555555555557,
+      "likes_median": 1.0,
+      "views_mean": 1691.6666666666667,
+      "views_median": 90.0,
+      "retweet_rate": 0.2222222222222222,
+      "attention_median": 597.0
+    },
+    {
+      "stance": "sport-centered",
+      "comments": 41,
+      "likes_mean": 42.63414634146341,
+      "likes_median": 2.0,
+      "views_mean": 10931.292682926829,
+      "views_median": 915.0,
+      "retweet_rate": 0.12195121951219512,
+      "attention_median": 641.0
+    },
+    {
+      "stance": "other/unclear",
+      "comments": 197,
+      "likes_mean": 16.03553299492386,
+      "likes_median": 2.0,
+      "views_mean": 3601.5786802030457,
+      "views_median": 638.0,
+      "retweet_rate": 0.07106598984771574,
+      "attention_median": 694.0
+    }
+  ]
+}
