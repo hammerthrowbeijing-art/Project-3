@@ -11,7 +11,7 @@ import pandas as pd
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_DATA_PATH = Path(r"C:\Users\Larry.Nie\Downloads\B50_X_COMMENT.xlsx")
+DEFAULT_DATA_PATH = REPO_ROOT / "data" / "B50_X_COMMENT.xlsx"
 FIGURES_DIR = REPO_ROOT / "outputs" / "figures"
 TABLES_DIR = REPO_ROOT / "outputs" / "tables"
 DOCS_DIR = REPO_ROOT / "docs"
@@ -579,7 +579,6 @@ def create_top_decile_figure(table: pd.DataFrame) -> None:
 
 
 def build_analysis_report(
-    data_path: Path,
     df: pd.DataFrame,
     sample_table: pd.DataFrame,
     stance_table: pd.DataFrame,
@@ -619,7 +618,7 @@ def build_analysis_report(
 
 This revised analysis responds to the instructor feedback by shifting the project from a generic engagement-correlation study to a **P3-style contested-discourse analysis**. Instead of treating all outcomes as interchangeable engagement measures, the report asks how commenters frame Trump's appearance in Break 50, how stance positions are distributed, and which kinds of comments receive more visible reaction.
 
-The raw Excel file remains local and outside version control. Data source used locally: `{data_path}`
+The raw dataset (public X comments collected around Donald Trump's July 2024 appearance on Bryson DeChambeau's *Break 50* YouTube series) is kept outside version control per course policy. The pipeline loads it at runtime via the `BREAK50_DATA_PATH` environment variable (see the repository README for cross-platform instructions).
 
 ## Revised Research Question
 
@@ -718,23 +717,18 @@ The analysis also shows that supportive, oppositional, and depoliticizing commen
 
 ## Reproduction
 
-```powershell
-$env:BREAK50_DATA_PATH=\"{data_path}\"
-py -X utf8 scripts/run_analysis.py
-```
+See the repository README for cross-platform instructions on setting `BREAK50_DATA_PATH` before running `scripts/run_analysis.py`.
 """
     (DOCS_DIR / "analysis_report.md").write_text(report, encoding="utf-8")
 
 
 def write_summary_json(
-    data_path: Path,
     df: pd.DataFrame,
     stance_table: pd.DataFrame,
     frame_table: pd.DataFrame,
     engagement_table: pd.DataFrame,
 ) -> None:
     payload = {
-        "data_path": str(data_path),
         "n_comments": int(len(df)),
         "stance_distribution": stance_table.to_dict(orient="records"),
         "frame_distribution": frame_table.to_dict(orient="records"),
@@ -772,7 +766,6 @@ def main() -> None:
     create_engagement_by_stance_figure(stance_engagement)
     create_top_decile_figure(top_decile_table)
     build_analysis_report(
-        data_path,
         df,
         sample_table,
         stance_table,
@@ -781,7 +774,7 @@ def main() -> None:
         top_decile_table,
         model_summary,
     )
-    write_summary_json(data_path, df, stance_table, frame_table, stance_engagement)
+    write_summary_json(df, stance_table, frame_table, stance_engagement)
     print(f"Analysis complete. Report written to: {DOCS_DIR / 'analysis_report.md'}")
 
 

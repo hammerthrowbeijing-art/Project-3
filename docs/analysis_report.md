@@ -4,7 +4,7 @@
 
 This revised analysis responds to the instructor feedback by shifting the project from a generic engagement-correlation study to a **P3-style contested-discourse analysis**. Instead of treating all outcomes as interchangeable engagement measures, the report asks how commenters frame Trump's appearance in Break 50, how stance positions are distributed, and which kinds of comments receive more visible reaction.
 
-The raw Excel file remains local and outside version control. Data source used locally: `C:\Users\Larry.Nie\Downloads\B50_X_COMMENT.xlsx`
+The raw dataset (public X comments collected around Donald Trump's July 2024 appearance on Bryson DeChambeau's *Break 50* YouTube series) is kept outside version control per course policy. The pipeline loads it at runtime via the `BREAK50_DATA_PATH` environment variable (see the repository README for cross-platform instructions).
 
 ## Revised Research Question
 
@@ -156,7 +156,4 @@ The analysis also shows that supportive, oppositional, and depoliticizing commen
 
 ## Reproduction
 
-```powershell
-$env:BREAK50_DATA_PATH="C:\Users\Larry.Nie\Downloads\B50_X_COMMENT.xlsx"
-py -X utf8 scripts/run_analysis.py
-```
+See the repository README for cross-platform instructions on setting `BREAK50_DATA_PATH` before running `scripts/run_analysis.py`.

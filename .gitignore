@@ -1,0 +1,17 @@
+# Local raw data — never commit per course policy
+*.xlsx
+*.csv
+data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
